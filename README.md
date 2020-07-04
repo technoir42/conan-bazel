@@ -13,7 +13,7 @@ Add package and enable the generator in `conanfile.txt`:
 
 ```
 [requires]
-conan-bazel/0.1
+conan-bazel/0.2
 
 [generators]
 Bazel
@@ -29,5 +29,5 @@ Add the generated repository to Bazel:
 
 ```
 load("//repo-dir:conan.bzl", "add_conan_repository")
-add_conan_repository()
+add_conan_repository(name = "conan")
 ```

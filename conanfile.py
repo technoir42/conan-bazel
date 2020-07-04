@@ -23,9 +23,9 @@ class Bazel(Generator):
                 sections.append(dep_source)
         build_file = "\n".join(sections)
 
-        source = """def add_conan_repository():
+        source = """def add_conan_repository(name):
     native.new_local_repository(
-        name = "external",
+        name = name,
         path = "{0}",
         build_file_content = \"\"\"{1}\"\"\"
     )
